@@ -170,11 +170,11 @@
       // Typed.js for dynamic text
       const typed = new Typed(".dynamic-text", {
         strings: ["Full Stack Developer", "Web Enthusiast"],
-        typeSpeed: 60, // Ταχύτητα γραφής
-        backSpeed: 40, // Ταχύτητα διαγραφής
-        backDelay: 1000, // Χρονικό διάστημα παύσης πριν ξεκινήσει η διαγραφή
-        loop: true, // Επανάληψη
-        smartBackspace: true, // Αποφυγή επανάληψης κειμένου που έχει ήδη γραφτεί
+        typeSpeed: 60, 
+        backSpeed: 40,
+        backDelay: 1000, 
+        loop: true, 
+        smartBackspace: true, 
       });
 
       // Smooth scroll functionality
@@ -191,10 +191,10 @@
       document.getElementById("contact-form").onsubmit = async function (
         event
       ) {
-        event.preventDefault(); // Αποτροπή της προεπιλεγμένης υποβολής φόρμας
-        const formData = new FormData(this); // Λήψη των δεδομένων της φόρμας
+        event.preventDefault(); 
+        const formData = new FormData(this); 
 
-        const responseMessage = document.getElementById("response-message"); // Λήψη του στοιχείου του μηνύματος
+        const responseMessage = document.getElementById("response-message"); 
 
         try {
           const response = await fetch(this.action, {
@@ -206,20 +206,20 @@
           });
 
           if (response.ok) {
-            responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
-            responseMessage.style.color = "green"; // Χρώμα του μηνύματος
+            responseMessage.style.display = "block"; 
+            responseMessage.style.color = "green"; 
             responseMessage.textContent =
               "Your message has been sent successfully!";
             this.reset(); // Επαναφορά της φόρμας
           } else {
-            responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
-            responseMessage.style.color = "red"; // Χρώμα του μηνύματος
+            responseMessage.style.display = "block"; 
+            responseMessage.style.color = "red"; 
             responseMessage.textContent =
               "There was a problem sending your message.";
           }
         } catch (error) {
-          responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
-          responseMessage.style.color = "red"; // Χρώμα του μηνύματος
+          responseMessage.style.display = "block"; 
+          responseMessage.style.color = "red"; 
           responseMessage.textContent = "There was an error: " + error.message;
         }
       };
