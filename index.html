@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Michos Fotios</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h1 class="brand-name">Michos Fotios</h1>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="intro">
+      <div class="container">
+        <div class="intro-text">
+          <h2>Hello, I'm <span class="dynamic-text"></span></h2>
+          <p>
+            Experienced in building modern web applications with a focus on
+            efficiency and performance. Passionate about coding and creating
+            intuitive user experiences.
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn primary">Download Resume</a>
+            <a href="#contact" class="btn secondary">Contact Me</a>
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://www.linkedin.com/in/fotios-michos-5b61a9317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a
+              href="https://github.com/mixosf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://el-gr.facebook.com/fotis.michos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="intro">
+      <div class="container">
+        <h2>My Education</h2>
+        <p>
+          I am currently student in Computer Engineering at the International
+          Hellenic University (IHU). Throughout my studies, I have built a
+          strong foundation in software development, algorithms, and web
+          technologies.
+        </p>
+        <ul>
+          <li>
+            <strong>Key Courses:</strong> Web Development, Algorithms, Databases
+          </li>
+          <li>
+            <strong>Achievements:</strong> Completed multiple projects, active
+            participation in coding workshops
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="intro">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a Computer Engineering student with a passion for web development
+          and technology. I enjoy building websites and applications that solve
+          real-world problems and provide great user experiences. As a student,
+          I am constantly learning and improving my skills in front-end and
+          back-end development. My current focus is on mastering HTML, CSS, and
+          JavaScript, and I'm eager to expand my knowledge in frameworks like
+          React and Node.js.
+        </p>
+        <p>
+          In addition to my technical interests, I love traveling. I believe
+          that travel broadens horizons and provides invaluable experiences that
+          contribute to personal growth. Exploring new cultures and meeting
+          people from different backgrounds inspires me and enhances my
+          creativity, which I bring into my work.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="intro">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          Feel free to reach out for any inquiries or collaboration
+          opportunities!
+        </p>
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xovaogdr"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+
+        <!-- Div για το μήνυμα -->
+        <div id="response-message" style="display: none"></div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+      // Menu toggle functionality for mobile
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Typed.js for dynamic text
+      const typed = new Typed(".dynamic-text", {
+        strings: ["Full Stack Developer", "Web Enthusiast"],
+        typeSpeed: 60, // Ταχύτητα γραφής
+        backSpeed: 40, // Ταχύτητα διαγραφής
+        backDelay: 1000, // Χρονικό διάστημα παύσης πριν ξεκινήσει η διαγραφή
+        loop: true, // Επανάληψη
+        smartBackspace: true, // Αποφυγή επανάληψης κειμένου που έχει ήδη γραφτεί
+      });
+
+      // Smooth scroll functionality
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.getElementById("contact-form").onsubmit = async function (
+        event
+      ) {
+        event.preventDefault(); // Αποτροπή της προεπιλεγμένης υποβολής φόρμας
+        const formData = new FormData(this); // Λήψη των δεδομένων της φόρμας
+
+        const responseMessage = document.getElementById("response-message"); // Λήψη του στοιχείου του μηνύματος
+
+        try {
+          const response = await fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
+            responseMessage.style.color = "green"; // Χρώμα του μηνύματος
+            responseMessage.textContent =
+              "Your message has been sent successfully!";
+            this.reset(); // Επαναφορά της φόρμας
+          } else {
+            responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
+            responseMessage.style.color = "red"; // Χρώμα του μηνύματος
+            responseMessage.textContent =
+              "There was a problem sending your message.";
+          }
+        } catch (error) {
+          responseMessage.style.display = "block"; // Εμφάνιση του μηνύματος
+          responseMessage.style.color = "red"; // Χρώμα του μηνύματος
+          responseMessage.textContent = "There was an error: " + error.message;
+        }
+      };
+    </script>
+  </body>
+</html>

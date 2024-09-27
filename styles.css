@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #222;
+    padding: 20px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.brand i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #00aaff;
+}
+
+.brand-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+nav {
+    float: right;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    display: inline;
+}
+
+nav .nav-links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
+nav .nav-links a:hover {
+    background-color: #007ced;
+    border-radius: 5px;
+}
+
+.intro {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007ced;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.buttons .btn {
+    text-transform: uppercase;
+    padding: 12px 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn.primary {
+    background-color: #007ced;
+    color: white;
+    border: none;
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid #007ced;
+    color: #007ced;
+}
+
+.social-icons a {
+    text-decoration: none; /* Αφαιρεί την υπογράμμιση από τα links */
+    border: none; /* Αφαιρεί το περίγραμμα */
+    display: inline-block;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #bbb;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #007ced;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e5e5e5;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid #007ced;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007ced;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    
+}
