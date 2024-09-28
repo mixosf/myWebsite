@@ -130,8 +130,8 @@ nav .nav-links a:hover {
 }
 
 .social-icons a {
-    text-decoration: none; /* Αφαιρεί την υπογράμμιση από τα links */
-    border: none; /* Αφαιρεί το περίγραμμα */
+    text-decoration: none; 
+    border: none; 
     display: inline-block;
 }
 
@@ -228,7 +228,7 @@ button[type="submit"]:hover {
         text-align: center;
     }
 
-    /* Προσαρμογή στα κουμπιά */
+    
     .buttons {
         display: flex;
         flex-direction: column;
