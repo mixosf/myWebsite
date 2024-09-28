@@ -12,8 +12,8 @@ body {
 }
 
 .container {
-    width: 100%; /* Αφήνουμε το container να γεμίσει όλη την οθόνη */
-    max-width: 1200px; /* Μέγιστο πλάτος σε μεγάλες οθόνες */
+    width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -21,10 +21,6 @@ body {
 .header {
     background-color: #222;
     padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Για να μετακινείται το menu κάτω αν χρειαστεί */
 }
 
 .brand {
@@ -45,8 +41,7 @@ body {
 }
 
 nav {
-    display: flex;
-    align-items: center;
+    float: right;
 }
 
 .menu-toggle {
@@ -135,8 +130,8 @@ nav .nav-links a:hover {
 }
 
 .social-icons a {
-    text-decoration: none;
-    border: none;
+    text-decoration: none; /* Αφαιρεί την υπογράμμιση από τα links */
+    border: none; /* Αφαιρεί το περίγραμμα */
     display: inline-block;
 }
 
@@ -203,13 +198,7 @@ button[type="submit"]:hover {
     background-color: #005bb5;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    /* Προσαρμογές για μικρές οθόνες */
-    .header {
-        flex-direction: column;
-    }
-
     nav .nav-links {
         display: none;
         flex-direction: column;
@@ -217,7 +206,7 @@ button[type="submit"]:hover {
         position: absolute;
         top: 70px;
         right: 0;
-        width: 100%;
+        width: 50%;
         height: 100vh;
         padding-top: 50px;
     }
@@ -235,36 +224,20 @@ button[type="submit"]:hover {
         display: block;
     }
 
-    .intro h2 {
-        font-size: 2rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-
     .container {
-        width: 100%;
+        text-align: center;
+    }
+
+    /* Προσαρμογή στα κουμπιά */
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .buttons .btn {
         width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Προσαρμογές για ακόμη μικρότερες οθόνες */
-    .intro h2 {
-        font-size: 1.8rem;
-    }
-
-    .intro p {
-        font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 14px;
+        margin: 10px 0;
+        padding: 12px 0;
     }
 }
